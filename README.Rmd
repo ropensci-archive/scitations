@@ -27,10 +27,14 @@ library("scitations")
 
 ## hello world
 
-make a `scitation` format object
+```{r}
+scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
+```
 
 ```{r}
-scitation()
+library("rcrossref")
+res <- cr_works(limit = 3)
+as.scitation(res$data) 
 ```
 
 ## Meta

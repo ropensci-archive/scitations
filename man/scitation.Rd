@@ -4,15 +4,20 @@
 \alias{scitation}
 \title{Make a scitation}
 \usage{
-scitation(...)
+scitation(type, key = NULL, ...)
 }
 \arguments{
-\item{...}{Further args}
+\item{type}{type of work}
+
+\item{key}{a key for your entry}
+
+\item{...}{key-value pairs, depends on work type}
 }
 \description{
 Make a scitation
 }
 \examples{
-scitation()
+scitation("article", doi = "10.7717/peerj.1126")
+scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
 }
 
