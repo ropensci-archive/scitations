@@ -24,7 +24,7 @@ as.scitation.scitation <- function(x) x
 
 #' @export
 as.scitation.character <- function(x) {
-  tmp <- unclass(parse_bib(cr_cn(dois = x)))[[1]]
+  tmp <- unclass(parse_bib(rcrossref::cr_cn(dois = x)))[[1]]
   tmp$type <- attr(tmp, "bibtype")
   tmp$key <- attr(tmp, "key")
   as.scitation(tmp)

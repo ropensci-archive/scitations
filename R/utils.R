@@ -8,8 +8,9 @@ get_year <- function(x, field) {
 
 parse_bib <- function(x) {
   x <- gsub("@[Dd]ata", "@Misc", x)
-  writeLines(x, "tmpscratch.bib")
-  output <- read.bib("tmpscratch.bib")
-  unlink("tmpscratch.bib")
+  tt <- tempfile(fileext = ".bib")
+  writeLines(x, tt)
+  output <- bibtex::read.bib(tt)
+  unlink(tt)
   output
 }
