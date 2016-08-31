@@ -1,7 +1,7 @@
 Package: scitations
 Title: Citations for R
 Description: Citations for R.
-Version: 0.0.1.9400
+Version: 0.0.1.9490
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
@@ -9,7 +9,9 @@ Authors@R: c(
 URL: https://github.com/ropenscilabs/scitations
 BugReports: http://www.github.com/ropenscilabs/scitations/issues
 Imports:
-    bibtex
+    bibtex,
+    tibble,
+    rcrossref
 Suggests:
     roxygen2 (>= 5.0.1)
 RoxygenNote: 5.0.1

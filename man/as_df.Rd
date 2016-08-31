@@ -6,12 +6,15 @@
 \usage{
 as_df(x)
 }
+\arguments{
+\item{x}{input}
+}
 \description{
 coerce scitations to data.frame
 }
 \examples{
-x <- scitation("article", 'petkun2016', doi = "10.7717/peerj.2399")
-as_df(x)
+#x <- scitation("article", 'petkun2016', doi = "10.7717/peerj.2399")
+#as_df(x)
 
 x <- scitation(
   "Article", "cui2016", 
@@ -22,6 +25,6 @@ x <- scitation(
 as_df(x)
 
 # from DOI
-as_df(as.scitation("10.7717/peerj.1126"))
+# as_df(as.scitation("10.7717/peerj.1126"))
 }
 

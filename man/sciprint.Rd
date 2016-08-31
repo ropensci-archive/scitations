@@ -13,6 +13,6 @@ sciprint(x)
 print citation
 }
 \examples{
-sciprint(scitation("article", 'petkun2016', doi = "10.7717/peerj.1126"))
+#sciprint(scitation("article", 'petkun2016', doi = "10.7717/peerj.1126"))
 }
 

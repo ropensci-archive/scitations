@@ -17,7 +17,15 @@ scitation(type, key = NULL, ...)
 Make a scitation
 }
 \examples{
-scitation("article", doi = "10.7717/peerj.1126")
-scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
+# scitation("article", doi = "10.7717/peerj.1126")
+scitation(
+ "article", 
+ 'petkun2016', 
+ doi = "10.7717/peerj.1126",
+ author = "foobar",
+ title = "That and this and stuff and things",
+ journaltitle = "Stuff And Things",
+ year = 2001
+)
 }
 

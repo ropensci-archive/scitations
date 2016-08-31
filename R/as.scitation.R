@@ -2,7 +2,7 @@
 #' 
 #' @export
 #' @param x input
-#' @examples 
+#' @examples \dontrun{
 #' # with rcrossref
 #' library("rcrossref")
 #' res <- cr_works(limit = 10)
@@ -14,6 +14,7 @@
 #' 
 #' # a doi
 #' as.scitation("10.7717/peerj.1126")
+#' }
 as.scitation <- function(x) {
   UseMethod("as.scitation")
 }

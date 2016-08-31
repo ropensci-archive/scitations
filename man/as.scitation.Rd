@@ -13,6 +13,7 @@ as.scitation(x)
 coerce things to scitations
 }
 \examples{
+\dontrun{
 # with rcrossref
 library("rcrossref")
 res <- cr_works(limit = 10)
@@ -24,5 +25,6 @@ as.scitation(x)
 
 # a doi
 as.scitation("10.7717/peerj.1126")
+}
 }
 
