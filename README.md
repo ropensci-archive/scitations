@@ -4,6 +4,8 @@ scitations
 
 
 [![Build Status](https://api.travis-ci.org/ropenscilabs/scitations.png)](https://travis-ci.org/ropenscilabs/scitations)
+[![codecov](https://codecov.io/gh/ropenscilabs/scitations/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/scitations)
+
 
 `scitations` - citations for R
 
@@ -24,7 +26,15 @@ library("scitations")
 
 
 ```r
-scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
+scitation(
+  "article", 
+  'petkun2016', 
+  doi = "10.7717/peerj.1126",
+  author = "foobar",
+  title = "That and this and stuff and things",
+  journaltitle = "Stuff And Things",
+  year = 2001
+)
 #> <scitation> 10.7717/peerj.1126 
 #>   type:  article
 ```
@@ -34,17 +44,6 @@ scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
 library("rcrossref")
 res <- cr_works(limit = 3)
 as.scitation(res$data) 
-#> [[1]]
-#> <scitation> 10.3390/ma8063101 
-#>   type:  journal-article 
-#> 
-#> [[2]]
-#> <scitation> 10.7567/ssdm.1986.c-3-1 
-#>   type:  proceedings-article 
-#> 
-#> [[3]]
-#> <scitation> 10.7567/ssdm.1986.c-3-2 
-#>   type:  proceedings-article
 ```
 
 ## Meta
