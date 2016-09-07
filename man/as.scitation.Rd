@@ -17,6 +17,7 @@ coerce things to scitations
 # with rcrossref
 library("rcrossref")
 res <- cr_works(limit = 10)
+res$data$type <- "article"
 as.scitation(res$data) 
 
 # self

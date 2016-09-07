@@ -27,7 +27,7 @@ devtools::install_github("ropenscilabs/scitations")
 library("scitations")
 ```
 
-## hello world
+## make a citation
 
 ```{r}
 scitation(
@@ -40,6 +40,8 @@ scitation(
   year = 2001
 )
 ```
+
+## citations via crossref data
 
 ```{r eval=FALSE}
 library("rcrossref")

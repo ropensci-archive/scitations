@@ -6,6 +6,7 @@
 #' # with rcrossref
 #' library("rcrossref")
 #' res <- cr_works(limit = 10)
+#' res$data$type <- "article"
 #' as.scitation(res$data) 
 #' 
 #' # self
@@ -46,8 +47,16 @@ as.scitation.tbl_df <- function(x) {
       doi = temp$DOI, 
       journaltitle = temp$container.title,
       title = temp$title,
-      year = get_year(temp, 'created')[1]
+      year = get_year(temp, 'created')[1],
+      author = make_authors(temp$author)
     )
   }
   return(out)
+}
+
+make_authors <- function(z) {
+  paste0(
+    apply(z[[1]], 1, paste0, collapse = ","),
+    collapse = "; "
+  )
 }

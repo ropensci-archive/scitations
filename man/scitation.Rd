@@ -11,7 +11,8 @@ scitation(type, key = NULL, ...)
 
 \item{key}{a key for your entry}
 
-\item{...}{key-value pairs, depends on work type}
+\item{...}{key-value pairs, depends on work type, see 
+\code{\link{work_types}}}
 }
 \description{
 Make a scitation
@@ -26,6 +27,15 @@ scitation(
  title = "That and this and stuff and things",
  journaltitle = "Stuff And Things",
  year = 2001
+)
+
+scitation(
+ "book", 
+ 'deGroot2015', 
+ doi = "10.1007/978-1-349-22928-4",
+ author = "de Groot, Joanna; Maynard, Mary",
+ title = "Women’s Studies in the 1990s",
+ year = 2015
 )
 }
 
