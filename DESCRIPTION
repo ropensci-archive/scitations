@@ -1,17 +1,22 @@
 Package: scitations
-Title: Citations for R
-Description: Citations for R.
-Version: 0.0.1.9495
+Title: Bibliographic Citation Tools
+Description: Bibliographic citation tools, including for making easy to 
+    use S3 citation objects called scitations, coercing DOI's, and rcrossref 
+    package outputs to scitations objects, and making and working with 
+    tidy citations. Citation objects are aware of the different citation 
+    work types and the fields allowed in each type.
+Version: 0.0.1.9499
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
     )
 URL: https://github.com/ropenscilabs/scitations
-BugReports: http://www.github.com/ropenscilabs/scitations/issues
+BugReports: https://github.com/ropenscilabs/scitations/issues
 Imports:
     bibtex,
     tibble,
-    rcrossref
+    rcrossref,
+    data.table
 Suggests:
     roxygen2 (>= 5.0.1),
     testthat,

@@ -13,6 +13,15 @@ sciprint(x)
 print citation
 }
 \examples{
-#sciprint(scitation("article", 'petkun2016', doi = "10.7717/peerj.1126"))
+x <- scitation(
+ "article", 
+ 'petkun2016', 
+ doi = "10.7717/peerj.1126",
+ author = "foobar",
+ title = "That and this and stuff and things",
+ journaltitle = "Stuff And Things",
+ year = 2001
+)
+#sciprint(x)
 }
 

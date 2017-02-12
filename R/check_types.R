@@ -1,11 +1,11 @@
 check_types <- function(x) {
-  if (!tolower(x$type) %in% names(types)) {
+  if (!tolower(x$type) %in% names(scitations_types)) {
     stop("type ", x$type, " not in allowed set\nsee ?types", call. = FALSE)
   }
 }
 
 check_fields <- function(x) {
-  flds <- types[[tolower(x$type)]]
+  flds <- scitations_types[[tolower(x$type)]]
   # required all given?
   if (!all(
     vapply(flds$required, function(z) any(grepl(z, names(x))), logical(1))

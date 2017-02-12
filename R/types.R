@@ -122,11 +122,11 @@ incollection <- list(
   )
 )
 
-# types$article
-# types$book
-# types$book$required
-# types$book$optional
-types <- list(
+# scitations_types$article
+# scitations_types$book
+# scitations_types$book$required
+# scitations_types$book$optional
+scitations_types <- list(
   article = article, 
   book = book,
   mvbook = mvbook,

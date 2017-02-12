@@ -16,10 +16,19 @@ knitr::opts_chunk$set(
 
 `scitations` - citations for R
 
+`scitations` is meant to make it easy to work with citations, whether in tidy 
+format or not, and to convert from various formats to citations, and to various
+formts. 
+
+The package introduces a simple S3 class called a `scitation` that we can then
+perform many operations with or on.
+
+There are other bibliographic packages out there - this package tries not to 
+duplicate their efforts, while striving for a fun to use citation workflow.
+
 ## Installation
 
 ```{r eval=FALSE}
-install.packages("devtools")
 devtools::install_github("ropenscilabs/scitations")
 ```
 
@@ -30,7 +39,7 @@ library("scitations")
 ## make a citation
 
 ```{r}
-scitation(
+(cit <- scitation(
   "article", 
   'petkun2016', 
   doi = "10.7717/peerj.1126",
@@ -38,7 +47,7 @@ scitation(
   title = "That and this and stuff and things",
   journaltitle = "Stuff And Things",
   year = 2001
-)
+))
 ```
 
 ## citations via crossref data
@@ -47,6 +56,18 @@ scitation(
 library("rcrossref")
 res <- cr_works(limit = 3)
 as.scitation(res$data) 
+```
+
+## coerce to a data.frame
+
+```{r}
+scitation_df(cit, cit, cit)
+```
+
+or from a list
+
+```{r}
+scitation_df(.list = list(cit, cit, cit))
 ```
 
 ## Meta

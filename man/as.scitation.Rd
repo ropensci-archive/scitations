@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.scitation.R
 \name{as.scitation}
 \alias{as.scitation}
-\title{coerce things to scitations}
+\title{Coerce things to scitations}
 \usage{
 as.scitation(x)
 }
@@ -10,7 +10,7 @@ as.scitation(x)
 \item{x}{input}
 }
 \description{
-coerce things to scitations
+Coerce things to scitations
 }
 \examples{
 \dontrun{
@@ -21,8 +21,20 @@ res$data$type <- "article"
 as.scitation(res$data) 
 
 # self
-x <- scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
+x <- scitation(
+ "article", 
+ 'petkun2016', 
+ doi = "10.7717/peerj.1126",
+ author = "foobar",
+ title = "That and this and stuff and things",
+ journaltitle = "Stuff And Things",
+ year = 2001
+)
 as.scitation(x)
+
+# data.frame
+df <- scitation_df(x)
+as.scitation(df)
 
 # a doi
 as.scitation("10.7717/peerj.1126")

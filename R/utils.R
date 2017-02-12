@@ -1,5 +1,6 @@
 make_key <- function(x) {
-  paste0(tolower(x$author[[1]]$family[1]), get_year(x, 'created')[1])
+  #paste0(tolower(x$author[[1]]), get_year(x, 'created')[1])
+  paste0(tolower(x$author[[1]]), x$year)
 }
 
 get_year <- function(x, field) {

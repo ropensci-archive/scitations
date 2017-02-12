@@ -1,4 +1,4 @@
-#' coerce things to scitations
+#' Coerce things to scitations
 #' 
 #' @export
 #' @param x input
@@ -10,14 +10,31 @@
 #' as.scitation(res$data) 
 #' 
 #' # self
-#' x <- scitation("article", 'petkun2016', doi = "10.7717/peerj.1126")
+#' x <- scitation(
+#'  "article", 
+#'  'petkun2016', 
+#'  doi = "10.7717/peerj.1126",
+#'  author = "foobar",
+#'  title = "That and this and stuff and things",
+#'  journaltitle = "Stuff And Things",
+#'  year = 2001
+#' )
 #' as.scitation(x)
+#' 
+#' # data.frame
+#' df <- scitation_df(x)
+#' as.scitation(df)
 #' 
 #' # a doi
 #' as.scitation("10.7717/peerj.1126")
 #' }
 as.scitation <- function(x) {
   UseMethod("as.scitation")
+}
+
+#' @export
+as.scitation.default <- function(x) {
+  stop("'as.scitation' does not accept objects of class ", class(x))
 }
 
 #' @export
@@ -33,7 +50,7 @@ as.scitation.character <- function(x) {
 
 #' @export
 as.scitation.list <- function(x) {
-  do.call('scitation', x)
+  lapply(x, as.scitation)
 }
 
 #' @export
@@ -44,11 +61,13 @@ as.scitation.tbl_df <- function(x) {
     out[[i]] <- scitation(
       temp$type, 
       make_key(temp), 
-      doi = temp$DOI, 
-      journaltitle = temp$container.title,
+      doi = temp$doi, 
+      journaltitle = temp$journaltitle,
       title = temp$title,
-      year = get_year(temp, 'created')[1],
-      author = make_authors(temp$author)
+      year = temp$year,
+      #year = get_year(temp, 'created')[1],
+      author = temp$author
+      #author = make_authors(temp$author)
     )
   }
   return(out)

@@ -36,4 +36,4 @@
 #' work_types()$book
 #' work_types()$book$required
 #' work_types()$book$optional
-work_types <- function() types
+work_types <- function() scitations_types

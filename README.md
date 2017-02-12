@@ -22,11 +22,11 @@ devtools::install_github("ropenscilabs/scitations")
 library("scitations")
 ```
 
-## hello world
+## make a citation
 
 
 ```r
-scitation(
+(cit <- scitation(
   "article", 
   'petkun2016', 
   doi = "10.7717/peerj.1126",
@@ -34,16 +34,46 @@ scitation(
   title = "That and this and stuff and things",
   journaltitle = "Stuff And Things",
   year = 2001
-)
+))
 #> <scitation> 10.7717/peerj.1126 
 #>   type:  article
 ```
+
+## citations via crossref data
 
 
 ```r
 library("rcrossref")
 res <- cr_works(limit = 3)
 as.scitation(res$data) 
+```
+
+## coerce to a data.frame
+
+
+```r
+scitation_df(cit, cit, cit)
+#> # A tibble: 3 × 7
+#>      type        key                doi author
+#>     <chr>      <chr>              <chr>  <chr>
+#> 1 article petkun2016 10.7717/peerj.1126 foobar
+#> 2 article petkun2016 10.7717/peerj.1126 foobar
+#> 3 article petkun2016 10.7717/peerj.1126 foobar
+#> # ... with 3 more variables: title <chr>, journaltitle <chr>, year <dbl>
+```
+
+or from a list
+
+
+```r
+scitation_df(.list = list(cit, cit, cit))
+#> # A tibble: 3 × 7
+#>      type        key                doi author
+#>     <chr>      <chr>              <chr>  <chr>
+#> 1 article petkun2016 10.7717/peerj.1126 foobar
+#> 2 article petkun2016 10.7717/peerj.1126 foobar
+#> 3 article petkun2016 10.7717/peerj.1126 foobar
+#> # ... with 3 more variables: title <chr>, journaltitle <chr>, year <dbl>
 ```
 
 ## Meta
