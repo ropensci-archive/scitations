@@ -5,7 +5,7 @@ Description: Bibliographic citation tools, including for making easy to
     package outputs to scitations objects, and making and working with 
     tidy citations. Citation objects are aware of the different citation 
     work types and the fields allowed in each type.
-Version: 0.0.1.9499
+Version: 0.0.3.9100
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")

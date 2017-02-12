@@ -34,7 +34,7 @@ scitation(
  'deGroot2015', 
  doi = "10.1007/978-1-349-22928-4",
  author = "de Groot, Joanna; Maynard, Mary",
- title = "Women’s Studies in the 1990s",
+ title = "Women's Studies in the 1990s",
  year = 2015
 )
 }
