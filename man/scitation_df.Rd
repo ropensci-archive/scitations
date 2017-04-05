@@ -34,4 +34,3 @@ scitation_df(.list = list(x, x, x, x))
 # from DOI
 # scitation_df(as.scitation("10.7717/peerj.1126"))
 }
-

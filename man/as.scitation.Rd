@@ -40,4 +40,3 @@ as.scitation(df)
 as.scitation("10.7717/peerj.1126")
 }
 }
-

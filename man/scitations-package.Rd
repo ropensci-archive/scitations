@@ -2,8 +2,8 @@
 % Please edit documentation in R/scitations-package.r
 \docType{package}
 \name{scitations-package}
-\alias{scitations}
 \alias{scitations-package}
+\alias{scitations}
 \title{Citations for R.}
 \description{
 \pkg{scitations} is meant to make it easy to work with citations, whether 
@@ -34,7 +34,7 @@ you can access any element with \code{$}, or \code{[}, or \code{[[}.
  \item work_types - get work types metadata, and required fields
 }
 }
+
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
-

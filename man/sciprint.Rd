@@ -24,4 +24,3 @@ x <- scitation(
 )
 #sciprint(x)
 }
-

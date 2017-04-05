@@ -40,6 +40,7 @@ Work types
  author, editor, title, booktitle, year/date.
 }
 }
+
 \examples{
 work_types()
 names(work_types())
@@ -47,4 +48,3 @@ work_types()$book
 work_types()$book$required
 work_types()$book$optional
 }
-

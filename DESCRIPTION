@@ -5,7 +5,7 @@ Description: Bibliographic citation tools, including for making easy to
     package outputs to scitations objects, and making and working with 
     tidy citations. Citation objects are aware of the different citation 
     work types and the fields allowed in each type.
-Version: 0.0.3.9140
+Version: 0.0.3.9510
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
@@ -18,7 +18,6 @@ Imports:
     rcrossref,
     data.table
 Suggests:
-    roxygen2 (>= 5.0.1),
-    testthat,
-    covr
-RoxygenNote: 5.0.1
+    roxygen2 (>= 6.0.1),
+    testthat
+RoxygenNote: 6.0.1

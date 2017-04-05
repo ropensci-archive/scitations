@@ -4,7 +4,7 @@
 \alias{scitation}
 \title{Make a scitation}
 \usage{
-scitation(type, key = NULL, ...)
+scitation(type, key = NULL, ..., .list = list())
 }
 \arguments{
 \item{type}{type of work}
@@ -38,4 +38,3 @@ scitation(
  year = 2015
 )
 }
-
