@@ -3,7 +3,7 @@
 # article$optional
 article <- list(
   required = c(
-    "author", "title", "journaltitle", "year|date"
+    "author", "title", "journal", "year|date"
   ),
   optional = c(
     "translator","annotator","commentator","subtitle", "titleaddon", 
@@ -122,6 +122,14 @@ incollection <- list(
   )
 )
 
+misc <- list(
+  required = c(),
+  optional = c(
+    "author","title","howpublished","month","year", "note", "key"
+  )
+)
+
+
 # scitations_types$article
 # scitations_types$book
 # scitations_types$book$required
@@ -136,5 +144,6 @@ scitations_types <- list(
   booklet = booklet,
   collection = collection,
   mvcollection = mvcollection,
-  incollection = incollection
+  incollection = incollection,
+  misc = misc
 )

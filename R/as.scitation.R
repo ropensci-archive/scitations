@@ -49,6 +49,14 @@ as.scitation.character <- function(x) {
 }
 
 #' @export
+as.scitation.bibentry <- function(x) {
+  tmp <- unclass(parse_bib(rcrossref::cr_cn(dois = x)))[[1]]
+  tmp$type <- attr(tmp, "bibtype")
+  tmp$key <- attr(tmp, "key")
+  as.scitation(tmp)
+}
+
+#' @export
 as.scitation.list <- function(x) {
   lapply(x, as.scitation)
 }

@@ -25,8 +25,13 @@
 #'  title = "Women's Studies in the 1990s",
 #'  year = 2015
 #' )
-scitation <- function(type, key = NULL, ...) {
-  res <- comp(c(list(type = type, key = key), list(...)))
+scitation <- function(type, key = NULL, ..., .list = list()) {
+  if (length(.list)) {
+    inp <- .list
+  } else {
+    inp <- list(...)
+  }
+  res <- comp(c(list(type = type, key = key), inp))
   check_types(res)
   check_fields(res)
   structure(res, class = "scitation")
