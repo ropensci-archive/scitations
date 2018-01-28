@@ -1,5 +1,8 @@
 {
-  "@context": ["http://purl.org/codemeta/2.0", "http://schema.org"],
+  "@context": [
+    "http://purl.org/codemeta/2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "scitations",
   "description": "Bibliographic citation tools, including for making easy to \n    use S3 citation objects called scitations, coercing DOI's, and rcrossref \n    package outputs to scitations objects, and making and working with \n    tidy citations. Citation objects are aware of the different citation \n    work types and the fields allowed in each type.",
@@ -102,5 +105,5 @@
   ],
   "contIntegration": "https://travis-ci.org/ropenscilabs/scitations",
   "readme": "https://github.com/ropenscilabs/scitations/blob/master/README.md",
-  "fileSize": "7.683KB"
+  "fileSize": "7.686KB"
 }
